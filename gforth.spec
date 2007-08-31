@@ -2,7 +2,6 @@
 %define release %mkrel 4
 %define version 0.6.2
 
-
 Name:		%name
 Release:	%release
 Version:	%version
@@ -15,6 +14,7 @@ Source16:	gnu-forth.16.png
 Source32:	gnu-forth.32.png
 Source48:	gnu-forth.48.png
 BuildRoot:	%_tmppath/%name-%version-%release
+BuildRequires:	emacs-bin
 
 %description
 Gforth is a fast and portable implementation of the ANS Forth language. 
@@ -27,7 +27,7 @@ Gforth is a fast and portable implementation of the ANS Forth language.
 # need to rebuild from these
 #touch engine/prim.i engine/prim_lab.i
 
-%configure CC="gcc -fno-reorder-blocks"
+%configure2_5x CC="gcc -fno-reorder-blocks"
 
 make
 
@@ -50,7 +50,7 @@ cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 Name=%{name}
 Comment=GNU Forth
 Exec=%{name} 
-Icon="gnu-forth.png"
+Icon=gnu-forth.png
 Terminal=false
 Type=Application
 Categories=Development;Building;
