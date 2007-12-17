@@ -13,7 +13,6 @@ Source:		%name-%version.tar.bz2
 Source16:	gnu-forth.16.png
 Source32:	gnu-forth.32.png
 Source48:	gnu-forth.48.png
-BuildRoot:	%_tmppath/%name-%version-%release
 BuildRequires:	emacs-bin
 
 %description
