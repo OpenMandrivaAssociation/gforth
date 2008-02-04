@@ -50,7 +50,7 @@ cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 Name=%{name}
 Comment=GNU Forth
 Exec=%{name} 
-Icon=gnu-forth.png
+Icon=gnu-forth
 Terminal=false
 Type=Application
 Categories=Development;Building;
