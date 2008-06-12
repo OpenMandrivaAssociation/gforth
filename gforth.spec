@@ -58,14 +58,18 @@ EOF
 
 
 %post
+%if %mdkversion < 200900
 %{update_menus}
+%endif
 %_install_info %{name}.info
 
 %preun
 %_remove_install_info %{name}.info
 
+%if %mdkversion < 200900
 %postun
 %{clean_menus}
+%endif
 
 %clean
 rm -rf $RPM_BUILD_ROOT
