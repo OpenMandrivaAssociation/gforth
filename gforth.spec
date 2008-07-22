@@ -1,5 +1,5 @@
 %define name  gforth
-%define release %mkrel 4
+%define release %mkrel 6
 %define version 0.6.2
 
 Name:		%name
