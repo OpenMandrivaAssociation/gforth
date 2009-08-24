@@ -1,18 +1,16 @@
-%define name  gforth
-%define release %mkrel 6
-%define version 0.6.2
-
-Name:		%name
-Release:	%release
-Version:	%version
-License:	GPL
+Name:		gforth
+Version:	0.7.0
+Release:	%mkrel 1
+License:	GPLv3+
 Group:		Development/Other
 Summary:	GNU Forth
 Url:		http://www.jwdt.com/~paysan/gforth.html
-Source:		%name-%version.tar.bz2
+Source:		http://www.complang.tuwien.ac.at/forth/gforth/%{name}-%{version}.tar.gz
 Source16:	gnu-forth.16.png
 Source32:	gnu-forth.32.png
 Source48:	gnu-forth.48.png
+Patch0:		gforth-0.7.0-buildpath.patch
+Patch1:		gforth-0.7.0-shebang.patch
 BuildRoot:	%_tmppath/%name-%version-%release
 BuildRequires:	emacs-bin
 
@@ -20,24 +18,23 @@ BuildRequires:	emacs-bin
 Gforth is a fast and portable implementation of the ANS Forth language. 
 
 %prep 
-
 %setup -q
+%patch0 -p1
+%patch1 -p1
+
+iconv -f latin1 -t utf8 AUTHORS > AUTHORS.new
+mv -f AUTHORS.new AUTHORS
 
 %build
-# need to rebuild from these
-#touch engine/prim.i engine/prim_lab.i
-
-%configure2_5x CC="gcc -fno-reorder-blocks"
-
+%configure2_5x 
 make
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__install} -d %{buildroot}/usr/share/emacs/site-lisp
-#make install prefix=%{buildroot}%{_prefix} exec_prefix=%{buildroot}%{_prefix} mandir=%{buildroot}%{_mandir} infodir=%{buildroot}%{_infodir}
 
-%makeinstall
+%makeinstall_std
 
 # icon section
 install -D %SOURCE16 %buildroot/%_miconsdir/gnu-forth.png
@@ -76,14 +73,15 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root, root)
-%doc README BUGS NEWS
+%doc README README.vmgen NEWS NEWS.vmgen AUTHORS BUGS
+
 %_bindir/*
 %_libdir/%name
 %_datadir/%name
 %_datadir/emacs/site-lisp/gforth.el
+%_datadir/emacs/site-lisp/gforth.elc
+%{_includedir}/%{name}/%{version}/*.h
 %_mandir/man1/*
 %_infodir/*
 %_iconsdir/*
-%_liconsdir/*
-%_miconsdir/*
 %_datadir/applications/*
