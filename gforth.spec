@@ -1,6 +1,6 @@
 Name:		gforth
 Version:	0.7.0
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPLv3+
 Group:		Development/Other
 Summary:	GNU Forth
