@@ -1,0 +1,29 @@
+diff -up gforth-0.7.0/filedump.fs.shebang gforth-0.7.0/filedump.fs
+--- gforth-0.7.0/filedump.fs.shebang	2008-11-05 23:23:36.000000000 +0100
++++ gforth-0.7.0/filedump.fs	2008-11-05 23:23:45.000000000 +0100
+@@ -1,4 +1,4 @@
+-#! /usr/local/lib/gforth/0.2.0/kernel.fi
++#!/usr/bin/gforth
+ \ file hex dump
+ 
+ \ Copyright (C) 1997,2002,2003,2004,2007 Free Software Foundation, Inc.
+diff -up gforth-0.7.0/httpd.fs.shebang gforth-0.7.0/httpd.fs
+--- gforth-0.7.0/httpd.fs.shebang	2008-11-05 23:17:39.000000000 +0100
++++ gforth-0.7.0/httpd.fs	2008-11-05 23:17:46.000000000 +0100
+@@ -1,4 +1,4 @@
+-#! /usr/local/bin/gforth
++#!/usr/bin/gforth
+ 
+ \ Copyright (C) 2000,2002,2003,2004,2006,2007,2008 Free Software Foundation, Inc.
+ 
+diff -up gforth-0.7.0/sieve.fs.shebang gforth-0.7.0/sieve.fs
+--- gforth-0.7.0/sieve.fs.shebang	2008-11-05 23:17:09.000000000 +0100
++++ gforth-0.7.0/sieve.fs	2008-11-05 23:17:24.000000000 +0100
+@@ -1,4 +1,4 @@
+-#! /usr/stud/paysan/bin/forth
++#!/usr/bin/gforth
+ 
+ DECIMAL
+ : SECS TIME&DATE  2DROP DROP  60 * + 60 * + ;
+diff -up gforth-0.7.0/siev.fs.shebang gforth-0.7.0/siev.fs
+diff -up gforth-0.7.0/startup.fs.shebang gforth-0.7.0/startup.fs

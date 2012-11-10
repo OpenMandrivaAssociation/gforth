@@ -1,0 +1,12 @@
+diff -up gforth-0.7.0/Makefile.in.buildpath gforth-0.7.0/Makefile.in
+--- gforth-0.7.0/Makefile.in.buildpath	2008-11-05 23:58:48.000000000 +0100
++++ gforth-0.7.0/Makefile.in	2008-11-05 23:59:06.000000000 +0100
+@@ -619,8 +619,6 @@ install:	gforth$(EC)$(EXE) $(FORTH_SRC) 
+ 		else \
+ 			echo '>>>>>Please install gforth.{el,elc} in your .../emacs/site-lisp directory'; \
+ 		fi
+-		-$(RM) gforth.fi
+-		GFORTHD="./gforth-ditc -p $(DESTDIR)$(libdir)/gforth/site-forth$(PATHSEP)$(DESTDIR)$(siteforthdir)$(PATHSEP)$(DESTDIR)$(datadir)/gforth/$(VERSION) -i $(kernel_fi)" GFORTH="./gforth-ditc -p $(DESTDIR)$(libdir)/gforth/site-forth$(PATHSEP)$(DESTDIR)$(siteforthdir)$(PATHSEP)$(DESTDIR)$(datadir)/gforth/$(VERSION) --die-on-signal -i $(kernel_fi) $(STARTUP)" includedir=$(includedir) bindir=$(bindir) libccdir=$(libccdir) GFORTHPATH=.:"$$GFORTHPATH" GFORTHDESTDIR="$(DESTDIR)" ./gforthmi gforth.fi $(FORTHSIZES) $(STARTUP)
+ 		$(INSTALL_DATA) gforth.fi $(DESTDIR)$(libdir)/gforth/$(VERSION)
+ 		$(INSTALL_DATA) install.TAGS $(DESTDIR)$(datadir)/gforth/$(VERSION)/TAGS
+ 		$(RM) gforth.fi install.TAGS
