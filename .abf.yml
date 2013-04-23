@@ -1,5 +1,5 @@
 sources:
-  "gforth-0.7.0.tar.gz" 5bb357268cba683f2a8c63d2a4bcab8f41cb0086
-  "gnu-forth.16.png" 6f5d057aad754084baa8f50bc496bc0875496ab6
-  "gnu-forth.32.png" 710c2de171ffb5ec5b82e8f65bf81b470f90b4cd
-  "gnu-forth.48.png" 43079158a1851625a14487e4d460968b2335f126
+  "gforth-0.7.0.tar.gz": 5bb357268cba683f2a8c63d2a4bcab8f41cb0086
+  "gnu-forth.16.png": 6f5d057aad754084baa8f50bc496bc0875496ab6
+  "gnu-forth.32.png": 710c2de171ffb5ec5b82e8f65bf81b470f90b4cd
+  "gnu-forth.48.png": 43079158a1851625a14487e4d460968b2335f126
