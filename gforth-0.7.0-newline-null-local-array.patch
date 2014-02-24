@@ -1,0 +1,33 @@
+--- gforth-0.7.0/prim.b	2008-10-15 16:34:28.000000000 +0200
++++ gforth-0.7.0/prim.b	2008-07-27 16:35:35.134393648 +0200
+@@ -2889,7 +2889,7 @@
+ 
+ newline	( -- c_addr u )	gforth
+ ""String containing the newline sequence of the host OS""
+-char newline[] = {
++static const char newline[] = {
+ #if DIRSEP=='/'
+ /* Unix */
+ '\n'
+--- a/engine/prim.i	Wed Apr 18 14:16:09 2012 +0100
++++ b/engine/prim.i	Wed Apr 18 14:19:53 2012 +0100
+@@ -9766,7 +9766,7 @@
+ sp += -2;
+ {
+ #line 1954 "./prim"
+-char newline[] = {
++static const char newline[] = {
+ #if DIRSEP=='/'
+ /* Unix */
+ '\n'
+--- a/prim.old	2012-04-18 09:37:15.656620436 +0200
++++ b/prim	2008-04-18 09:37:19.177624128 +0200
+@@ -1950,7 +1950,7 @@
+ 
+ newline	( -- c_addr u )	gforth
+ ""String containing the newline sequence of the host OS""
+-char newline[] = {
++static const char newline[] = {
+ #if DIRSEP=='/'
+ /* Unix */
+ '\n'
