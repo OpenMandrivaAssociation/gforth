@@ -17,6 +17,7 @@ Patch2:		gforth-0.7.0-compile-fix.patch
 Patch3:		gforth-0.7.0-broken-disassembler.patch
 Patch4:		gforth-0.7.0-newline-null-local-array.patch
 Patch5:		gforth-0.7.0-libtool-build.patch
+Patch6:		gforth-0.7.0-compile.patch
 BuildRequires:	emacs
 
 %description
@@ -41,10 +42,11 @@ Gforth is a fast and portable implementation of the ANS Forth language.
 %setup -q
 %patch0 -p1
 %patch1 -p1
-%patch2 -p 1 -b .compile-fix
-%patch3 -p 1 -b .broken-disassembler
-%patch4 -p 1 -b .newline-null-local-array
-%patch5 -p 1 -b .libtool-build
+%patch2 -p1 -b .compile-fix
+%patch3 -p1 -b .broken-disassembler
+%patch4 -p1 -b .newline-null-local-array
+%patch5 -p1 -b .libtool-build
+%patch6 -p1
 
 iconv -f latin1 -t utf8 AUTHORS > AUTHORS.new
 mv -f AUTHORS.new AUTHORS

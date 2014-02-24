@@ -1,0 +1,21 @@
+diff -urN gforth-0.7.0/gforth.el gforth-0.7.0-patched/gforth.el
+--- gforth-0.7.0/gforth.el	2008-07-16 03:01:23.000000000 +1100
++++ gforth-0.7.0-patched/gforth.el	2014-02-25 01:44:11.263179873 +1100
+@@ -726,12 +726,11 @@
+ 		 (get-text-property from 'fontified))
+        (forth-update-properties from to)))))
+ 
+-(eval-when-compile
+-  (byte-compile 'forth-set-word-properties)
+-  (byte-compile 'forth-next-known-forth-word)
+-  (byte-compile 'forth-update-properties)
+-  (byte-compile 'forth-delete-properties)
+-  (byte-compile 'forth-get-regexp-branch)) 
++(byte-compile 'forth-set-word-properties)
++(byte-compile 'forth-next-known-forth-word)
++(byte-compile 'forth-update-properties)
++(byte-compile 'forth-delete-properties)
++(byte-compile 'forth-get-regexp-branch)
+ 
+ ;;; imenu support
+ ;;;
