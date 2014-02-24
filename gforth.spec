@@ -9,6 +9,7 @@ Source0:	http://www.complang.tuwien.ac.at/forth/gforth/%{name}-%{version}.tar.gz
 Source16:	gnu-forth.16.png
 Source32:	gnu-forth.32.png
 Source48:	gnu-forth.48.png
+Source100:	%{name}.rpmlintrc
 Patch0:		gforth-0.7.0-buildpath.patch
 Patch1:		gforth-0.7.0-shebang.patch
 # s390 build fix from Debian (http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=544827)
