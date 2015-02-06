@@ -1,7 +1,7 @@
 Summary:	GNU Forth
 Name:		gforth
 Version:	0.7.0
-Release:	4
+Release:	5
 License:	GPLv3+
 Group:		Development/Other
 Url:		http://www.jwdt.com/~paysan/gforth.html
