@@ -4,7 +4,7 @@ Version:	0.7.0
 Release:	5
 License:	GPLv3+
 Group:		Development/Other
-Url:		http://www.jwdt.com/~paysan/gforth.html
+Url:		https://www.jwdt.com/~paysan/gforth.html
 Source0:	http://www.complang.tuwien.ac.at/forth/gforth/%{name}-%{version}.tar.gz
 Source16:	gnu-forth.16.png
 Source32:	gnu-forth.32.png
