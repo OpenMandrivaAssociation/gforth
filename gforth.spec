@@ -19,6 +19,11 @@ Patch3:		gforth-0.7.0-broken-disassembler.patch
 Patch4:		gforth-0.7.0-newline-null-local-array.patch
 Patch5:		gforth-0.7.0-libtool-build.patch
 Patch6:		gforth-0.7.0-compile.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	emacs
 
 %description
