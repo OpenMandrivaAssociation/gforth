@@ -1,0 +1,30 @@
+--- a/prim	2013-10-11 23:31:28.089992517 +0200
++++ b/prim	2026-08-02 18:37:33.093660851 +0200
+@@ -1950,6 +1950,7 @@
+ 
+ newline	( -- c_addr u )	gforth
+ ""String containing the newline sequence of the host OS""
++/* keep static const: avoid large automatic array on constrained targets */
+ static const char newline[] = {
+ #if DIRSEP=='/'
+ /* Unix */
+--- a/prim.b	2013-10-11 23:32:17.357584523 +0200
++++ b/prim.b	2026-08-02 18:37:33.093804273 +0200
+@@ -2889,6 +2889,7 @@
+ 
+ newline	( -- c_addr u )	gforth
+ ""String containing the newline sequence of the host OS""
++/* keep static const: avoid large automatic array on constrained targets */
+ static const char newline[] = {
+ #if DIRSEP=='/'
+ /* Unix */
+--- a/engine/prim.i	2013-10-11 23:32:18.495598198 +0200
++++ b/engine/prim.i	2026-08-02 18:37:33.094487812 +0200
+@@ -9766,6 +9766,7 @@
+ sp += -2;
+ {
+ #line 1954 "prim"
++/* keep static const: avoid large automatic array on constrained targets */
+ static const char newline[] = {
+ #if DIRSEP=='/'
+ /* Unix */

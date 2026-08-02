@@ -1,0 +1,11 @@
+--- a/Makefile.in	2013-10-11 23:31:27.999991436 +0200
++++ b/Makefile.in	2026-08-02 18:37:32.983522779 +0200
+@@ -621,6 +621,8 @@
+ 		fi
+ 		$(INSTALL_DATA) gforth.fi $(DESTDIR)$(libdir)/gforth/$(VERSION)
+ 		$(INSTALL_DATA) install.TAGS $(DESTDIR)$(datadir)/gforth/$(VERSION)/TAGS
++		# Drop local images after install (may embed build paths; ownership)
++		$(RM) gforth.fi install.TAGS
+ 		$(INSTALL_DATA) include/gforth/$(VERSION)/* $(DESTDIR)$(includedir)/gforth/$(VERSION)
+ 		if test -n "$(LIBTOOL)"; then for i in $(LIBCC_BUILD_SRC); do \
+ 		   $(LIBTOOL) --silent --mode=install $(INSTALL) lib/gforth/$(VERSION)/libcc-named/`basename $$i .fs`.la $(DESTDIR)$(libccdir)`basename $$i .fs`.la; \

@@ -1,0 +1,10 @@
+--- a/gforth.el	2014-02-28 21:52:49.788222044 +0100
++++ b/gforth.el	2026-08-02 18:37:42.718828428 +0200
+@@ -724,6 +724,7 @@
+ 		 (get-text-property from 'fontified))
+        (forth-update-properties from to)))))
+ 
++;; Compile hot font-lock helpers at load time (not only eval-when-compile)
+ (byte-compile 'forth-set-word-properties)
+ (byte-compile 'forth-next-known-forth-word)
+ (byte-compile 'forth-update-properties)

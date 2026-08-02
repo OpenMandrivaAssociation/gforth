@@ -1,0 +1,24 @@
+--- a/filedump.fs	2013-10-11 23:31:28.066992241 +0200
++++ b/filedump.fs	2026-08-02 18:37:33.008567401 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/local/lib/gforth/0.2.0/kernel.fi
++#!/usr/bin/gforth
+ \ file hex dump
+ 
+ \ Copyright (C) 1997,2002,2003,2004,2007 Free Software Foundation, Inc.
+--- a/httpd.fs	2013-10-11 23:31:28.070992289 +0200
++++ b/httpd.fs	2026-08-02 18:37:33.008632892 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/local/bin/gforth
++#!/usr/bin/gforth
+ 
+ \ Copyright (C) 2000,2002,2003,2004,2006,2007,2008 Free Software Foundation, Inc.
+ 
+--- a/sieve.fs	2013-10-11 23:31:28.091992542 +0200
++++ b/sieve.fs	2026-08-02 18:37:33.008695153 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/stud/paysan/bin/forth
++#!/usr/bin/gforth
+ 
+ DECIMAL
+ : SECS TIME&DATE  2DROP DROP  60 * + 60 * + ;

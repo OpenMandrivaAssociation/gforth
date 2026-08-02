@@ -1,7 +1,6 @@
-diff -up gforth-0.7.0/engine/support.c.orig gforth-0.7.0/engine/support.c
---- gforth-0.7.0/engine/support.c.orig	2008-11-01 23:06:35.000000000 +0100
-+++ gforth-0.7.0/engine/support.c	2011-03-21 14:53:52.000000000 +0100
-@@ -724,16 +724,21 @@ DCell smdiv (DCell num, Cell denom)
+--- a/engine/support.c	2013-10-11 23:31:28.062992193 +0200
++++ b/engine/support.c	2026-08-02 18:37:33.038348457 +0200
+@@ -724,16 +724,21 @@
    DCell res;
  #if defined(sdiv_qrnnd)
    /* #warning "using sdiv_qrnnd" */
